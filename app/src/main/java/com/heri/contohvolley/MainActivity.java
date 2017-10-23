@@ -23,13 +23,12 @@ TextView tv;
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.Tview);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="http:localhost";
+        String url ="https://www.google.co.id";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                tv.setText("Response adalah : " + response.substring(0, 10000));
-                findViewById(R.id.Tview);
+                tv.setText("Response adalah : " + response.substring(0, 500));
             }
         }, new Response.ErrorListener() {
             @Override
