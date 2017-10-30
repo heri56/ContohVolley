@@ -3,20 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.heri.contohvolley.MainActivity">
-
+    tools:context="com.heri.contohvolley.VolleyPHPActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/Tview"/>
+        android:padding="16dp"
+        android:text="Txt"
+        android:id="@+id/Txttamp"
+        />
     <Button
-        android:id="@+id/Btnn"
-        android:textAllCaps="false"
-        android:text="Button"
+        android:id="@+id/BtnVolely"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/Tview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="PHP Volley"/>
 
 </RelativeLayout>
