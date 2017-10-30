@@ -1,7 +1,10 @@
 package com.heri.contohvolley;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Cache;
@@ -15,11 +18,13 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.heri.contohvolley.phpvolley.PHPVolleyAndroidActivity;
 
 public class VolleyPHPActivity extends AppCompatActivity {
 
     String url = "http://192.168.18.1/jasa.php";
     TextView textView;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,5 +50,13 @@ public class VolleyPHPActivity extends AppCompatActivity {
             }
         });
         rq.add(stringRequest);
+        btn = findViewById(R.id.BtnVolely);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(VolleyPHPActivity.this,PHPVolleyAndroidActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
